@@ -1,0 +1,612 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+\usepackage{relsize}
+
+\usepackage{color} %% theorem colors
+\definecolor{purple}{rgb}{0.5,0.20,0.7}
+\definecolor{navy}{rgb}{0,0.3,0.7}
+\definecolor{forrest}{rgb}{0,0.55,0.25}
+\definecolor{strawberry}{rgb}{0.9,0.17,0.3}
+\definecolor{orange}{rgb}{0.9,0.40,0.2}
+\definecolor{pink}{rgb}{0.85,0.50,0.75}
+
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\x}{\times}
+
+
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{\color{navy}Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{\color{purple}Lemma}
+\newtheorem{corollary}[theorem]{\color{pink}Corollary}
+
+
+\newtheorem{axiom}{Axiom}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{\color{forrest}Definition}
+\newtheorem{nondefinition}[theorem]{\color{forrest}Non-Definition}
+\newtheorem{exercise}[theorem]{\color{orange}Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{\color{strawberry}Warning}
+
+
+\numberwithin{equation}{subsection}
+
+
+
+
+%----------Title-------------
+\title{Sheet 0: Basics}
+\author{Jordan Paschke}
+\date{}
+
+\begin{document}
+
+\pagestyle{plain}
+
+
+%%---  sheet number for theorem counter
+
+\begin{center}
+{\large  MATH 113 -- Honors Calculus\\
+$\bullet$ \quad \textbf{SHEET 0: BASICS \quad $\bullet$}}  \\ 
+\vspace{.2in}  
+Jordan Paschke\\August 28, 2015
+\end{center}
+
+\bigskip \bigskip
+
+
+
+
+
+
+
+\bigskip \bigskip
+
+These course notes provide the definitions and statements of facts about the \emph{continuum} and the analysis of real-valued functions.  It is up to you to provide the proofs, using only definitions, axioms, and propositions already proved.
+
+\subsection*{Thinking Logically}
+
+In this course, we will write mathematical proofs to justify propositions.  A proposition is a declarative statement with a well-defined meaning that is either true or false.  For example,
+\[
+\text{``$12$ is divisble by 5.''}
+\]
+is a proposition\footnote{to be more precise, we should specify which number system we are using: the proposition is true if we are talking about rational numbers ($12$ divided by $5$ equals $\frac{12}{5}$), but not true over the integers. For now, we will assume we are talking about integers, so this is a proposition that happens to be false.}, but 
+\[
+\text{``$12$ is an interesting number.''}
+\]
+is not a proposition (unless we have given a precise definition of what it means for a number to be interesting). We will use definitions, and previously proven theorems, to prove (or disprove) propositions.\\
+
+
+It is assumed that you know about the natural numbers $\mathbb{N} = \{0, 1, 2, 3, 4, \dotsc \}$ and the integers $\mathbb{Z} = \{ \dotsc, -4, -3, -2, -1, 0, 1, 2, 3, 4, \dotsc \}$.  We will not hesitate to use the concept of equality (=), or identity of objects.  Mathematical thinking is based on the operations of logic.  We list some of them below, with common symbolic representations.  While these symbols can be useful in shorthand, boardwork and scratchwork, it is generally best to write your mathematical reasoning using words and complete sentences, as will be done on these sheets.
+\begin{gather*}
+\forall: \text{``for all"}, \qquad \exists: \text{``there exists"}, \qquad \neg: \text{``not"} \\
+ \qquad \Longrightarrow : \text{implies, or ``if ..., then ...''},  \qquad \Longleftrightarrow: \text{``if and only if"}.
+\end{gather*}\vspace{.1cm}
+
+A good skill to develop is to be able to ``translate" between propositions written in English, and propositions written in the language of logic. For example,
+
+\[
+\text{``$12$ is divisble by 5.''}
+\]
+means that
+\[
+\text{``There is an integer $C$ that, when multiplied by $5$, is equal to $12$.''}
+\]
+which is equivalent to
+\[
+\exists C \in \mathbb{Z} \text{ such that } C\times 5 = 12
+\]\vspace{1cm}
+
+\noindent Observe that the negation of the above statement is
+\[
+\text{``$12$ is NOT divisble by 5.''}
+\]
+which is equivalent to the following statements:
+
+\[
+\text{``There is NO integer $C$ that, when multiplied by $5$, is equal to $12$.''}
+\]
+
+\[
+\text{`` For every $C\in \mathbb{Z}$, it is true that $C\times 5 \neq 12$''}
+\]
+
+\[
+\forall C \in \mathbb{Z},\hspace{.5cm} C\times 5 \neq 12
+\]
+
+When we write up proofs in this class, they will always be written in English - however, using the language of logic can help you gain an understanding of precisely what you are trying to prove, and offer clues on how to proceed.
+
+\begin{exercise}
+Prove the following proposition: ``The sum of any two even numbers is even.''
+\end{exercise}
+
+%%%% Examples of Proofs %%%%
+%%%%
+
+\subsection*{Examples of Proofs}
+
+Mathematical proofs are written using complete sentences in a human language (for this course, English please!).  A proof starts from known assumptions, then performs logical arguments to arrive at a goal.  It is a good idea to remind the reader of where you are starting, where you are going, and where you shall arrive.  Remember the old dictum on oration:
+\[
+\text{``Tell them what you will say, then say it, then tell them what you have said.''}
+\]
+Mathematics can be technical, cumbersome, and confusing, so it is always a good idea to be as clear as possible in your explanations of the logical steps in a proof.
+
+\newpage
+
+We will begin our discussion of proofs with an example of a \emph{bad} proof of a true fact:  
+
+
+
+\begin{theorem}
+The equation $\sin^2 x (1 + \cot^2 x) = 1$ holds for every number $x$.
+\end{theorem}
+
+\hrule
+
+\begin{proof}
+\begin{align*}
+\sin^2 x(1 + \cot^2 x) &\overset{?}{=} 1 \\
+\sin^2 x + \sin^2 x \cdot \frac{\cos^2 x}{\sin^2 x}  &\overset{?}{=} 1 \\
+\sin^2 x + \cos^2 x &= 1, 
+\end{align*}
+which is true.
+\end{proof}
+
+\hrule
+
+
+\vspace{0.4cm}
+
+Here are some reasons why this proof is bad:
+\begin{itemize}
+\item The proof does not use complete sentences to conduct a logical argument.
+\item The proof starts with symbols, without saying what the objects are or why we are considering them.
+\item The first equation is not yet known to be true --- in fact it is exactly what we want to prove.  Even with the question-mark symbol over the equals sign, it is \emph{never} a good idea to write down something that is not known to be true, unless you proceed it with a qualification, such as: ``We want to prove that ...''  
+\item At the end of the proof, we arrive at something asserted to be true, but it is not clear why that proves the desired statement.
+\end{itemize}
+
+In general, I strongly discourage the use of the ``horseshoe'' proof method: where a student might manipulate both sides of an equation until they match togehter at the bottom.\\
+
+Here is a good proof of the same fact:\\
+
+\hrule
+
+\begin{proof}
+We want to prove that the equation $\sin^2 x(1 + \cot^2 x) = 1$ holds for every value of $x$.  To this end, we make some algebraic manipulations:
+\begin{align*}
+\sin^2 x(1 + \cot^2 x) &= \sin^2 x + \sin^2 x \cdot \frac{\cos^2 x}{\sin^2 x} \\
+&= \sin^2 x + \cos^2 x.
+\end{align*}
+By substituting in the identity $\sin^2 x + \cos^2 x = 1$, we arrive at the desired equation 
+\[
+\sin^2 x(1 + \cot^2 x) = 1.
+\]
+
+\end{proof}
+
+\hrule
+
+\newpage
+
+You might still have some complaints about the proof.  For example, we did not justify why the identity $\sin^2 + \cos^2 x = 1$ is true, nor did we explain why $\cot x$ becomes $\frac{\cos x}{\sin x}$. It is valid to use previously known results, such as these, in your proofs, but you must judge based on the context how much prior knowledge you expect the reader of your proof to have.  For this course, imagine that you are writing your proofs in order to communicate your ideas to a fellow classmate.  Just for fun, you might as well ponder:
+
+
+\begin{exercise}
+Based on your geometric understanding of the sine and cosine functions, prove that $\sin^2 x + \cos^2 x = 1$.
+\end{exercise} 
+ 
+\begin{exercise}
+What are some further complaints you might have about the purportedly good proof?
+\end{exercise}
+
+\bigskip
+
+Another useful method of proof is \textbf{proof by contradiction}.  If you want to prove that a proposition $Q$ is true under the hypothesis (or a list of hypotheses) $P$, it is often easier to assume to the contrary that $Q$ is false and then reach a contradiction with the initial hypothesis $P$.  Since we do not allow contradictions in our logical world, we have no choice but to conclude that the assumption ``$Q$ was false" was incorrect, thus proving $Q$, in fact, true.  In symbols, this means the implication 
+\[
+P \Longrightarrow Q
+\]
+is equivalent to its \textbf{contrapositive}
+\[
+ \neg Q \Longrightarrow \neg P.
+\]  
+
+\begin{exercise}  Find examples of propositions $P$ and $Q$ that show that the implication 
+\[
+P \Longrightarrow Q
+\]
+ is not always equivalent to its converse 
+ \[
+ Q \Longrightarrow P.
+ \]
+\end{exercise}
+
+Here is an example of such a proof:
+
+\begin{theorem}
+There are infinitely many prime numbers
+\end{theorem}
+
+\hrule
+
+\begin{proof}
+We will show that there are infinitely many prime numbers by showing that there \emph{cannot} be only finitely many; this is an example of a proof by contradiction. We begin by assuming that there are finitely many prime numbers (say, $N$ of them), and derive a contradiction.
+
+Since we are assuming that there are only a finite number of primes, then we are able to list them all out, in increasing order, as $p_1, p_2, \dots, p_N$. This means that every number larger than $p_N$ must be a composite number. We now consider the new integer
+$$Q = p_1\times p_2\times\cdots \times p_n + 1.$$
+
+Notice that $Q$ is larger than $p_N$, and so it must be composite, under our assumption. Observe that $Q / p_1$ yields a remainder of 1, and so $Q$ is not divisible by $p_1$. An identical argument can be repeated to show that $Q$ is not divisible by $p_2$, $p_3$, and so on, up to and including $p_N$. This implies that one of two things must be true:
+\begin{enumerate}
+\item Q is a prime number.
+\item Q is a composite number, but is divisible by some prime number $p$ not on our original list.
+\end{enumerate}
+
+In either case, we must then have a prime number that was not on our list. Since our list was assumed to be a complete list, our original assumption must be incorrect. Thus, there are infinitely many prime numbers.
+\end{proof}
+
+\hrule
+
+\bigskip
+
+\emph{Remark}: In order for the above proof to truly be complete, we must first be in agreement about what it means for a number to be composite, and what we mean by the symbols $Q/p_1$. We must also understand how implications 1. and 2. follow from the fact that $Q$ is not divisible by $p_1$ through $p_N$.
+
+This would be considered a ``good" proof by any mathematician, but to a student who is still learning, it is possible that these points might need some extra clarification. Again, finding the right balance between ``too little" and ``too much" information is key. Knowing your mathematical audience is a very good skill to have.
+
+
+%\begin{theorem}
+%The square root of $2$ is an irrational number.
+%\end{theorem}
+%\begin{proof}
+%To prove that $\sqrt{2}$ is irrational, we must show that it is not a rational number.  We will %proceed by using the method of proof by contradiction: we will assume that $\sqrt{2}$ is a rational %number, then then derive a contradiction, thereby showing that our assumption must be false.
+
+%Assume that $\sqrt{2}$ is rational.  This means that there exists integers $m$ and $n$ such that $n %\neq 0$ and $\sqrt{2} = m/n$.  By dividing out by the common divisors of $m$ and $n$, we may assume %that $m$ and $n$ have no common divisors greater than $1$ (in other words, the fraction $m/n$ is in %reduced form).  This means that if $d$ is an integer larger than $1$, then $d$ cannot divide both $m%$ and $n$.
+
+%Squaring both sides of the equation $\sqrt{2} = m/n$,  we see that:
+%\[
+%2 = (\sqrt{2})^2 = \frac{m^2}{n^2}.
+%\]
+%Rearranging this expression, we arrive at:
+%\[
+%2 n^2 = m^2.
+%\]
+%Notice that since $2$ divides the left hand side of the equation, $2$ must also divide the right %hand side of the equation.  Recall that $2$ is a prime number, i.e. it has no divisors besides~$1$ %and itself.  This means that if $2$ divides a product of integers $ab$, then there is no way to %split up the divisors of $2$ among the two factors $a$ and $b$, and so $2$ must divide either $a$ or %$b$.  In our situation, we know that $2$ divides $m^2 = m \cdot m$, and so we may conclude that $2$ %divides $m$.  Now we may write $m = 2 m'$ for some integer $m'$.  Substituting this into the %equation above, we get:
+%\[
+%2n^2 = m^2 = (2m')^2 = 4 (m')^2.
+%\]
+%Dividing by $2$, we see that:
+%\[
+%n^2 = 2 (m')^2.
+%\]
+%Therefore $2$ divides $n^2$, and so because $2$ is prime, $2$ must divide $n$ as well.  We have %shown that $2$ divides both $m$ and $n$, which is a contradiction to our assumption that $m$ and $n$ %have no common divisors.  From this contradiction, we conclude that our original assumption that $%\sqrt{2}$ is a rational number must be false, and so $\sqrt{2}$ is irrational.
+%\end{proof}
+
+\bigskip
+
+
+One other useful proof technique is \textbf{proof by induction}.  The following theorem justifies the method of proof by induction:
+
+\begin{theorem}[Induction]\label{Induction}  Let $P(n)$ be a proposition defined for each positive integer $n$.  Suppose that:
+\begin{itemize}
+\item[(A)] $P(1)$ is true, and that
+\item[(B)] if $P(n)$ is true, then $P(n + 1)$ is true.
+\end{itemize}
+Then $P(n)$ is true for all $n \geq 1$.
+\end{theorem}
+
+Statement \emph{(A)} is called the \emph{base case} and statement \emph{(B)} is called the \emph{inductive step}.  The assumption that $P(n)$ is true called the \emph{inductive hypothesis}.  The upshot of the theorem is that in order to prove that $P(n)$ is true for all positive integers $n$, it suffices to establish the base case $P(1)$, then show that if $P(n)$ is true (for some $n$) then $P(n + 1)$ is true --- i.e. then the next case must also be true.  This is the method of proof by induction.\\
+
+Here is an example of a proof by induction.  
+\begin{theorem}  Let $n$ be a positive integer.  Then:
+$$1 + 2 + 3 + \dotsm + n = \dfrac{n (n + 1)}{2}.$$
+\end{theorem}
+
+\noindent We will not use the notation $P(n)$ to stand for the proposition ``$1 + 2 + 3 + \dotsm + n = \tfrac{n (n + 1)}{2}$'', but that is the proposition playing the role of $P(n)$ in Theorem \ref{Induction} (we could explicitly use that notation in the proof if we wanted to be abundantly clear how we are using induction).\\
+
+\hrule
+
+\begin{proof}
+We will prove the identity by induction on the number $n$.  When $n = 1$, the identity is obvious:
+$$1 = \dfrac{1 (1 + 1)}{2}.$$
+
+\noindent Thus we have established the base case.  Inductively assume that the identity holds for $n$:
+\[
+1 + 2 + 3 + \dotsm + n = \dfrac{n (n + 1)}{2}.
+\]
+In order to prove that the identity holds for $n + 1$, we add $n + 1$ to both sides of the above equation, then perform some algebraic manipulations:
+\begin{align*}
+1 + 2 + 3 + \dotsm + n + (n + 1) &= \dfrac{n (n + 1)}{2} + (n + 1) \\
+&= \dfrac{n ( n + 1) + 2(n + 1)}{2} \\
+&= \dfrac{n^2 + 3n + 2}{2} \\
+&= \dfrac{(n + 1)(n + 2)}{2}.
+\end{align*}
+The combined equation proves the identity for $n + 1$, which completes the proof of the inductive step.
+\end{proof}
+
+
+\begin{exercise}  Prove that for all positive integers $n$,  
+\[
+1^2 + 2^2 + 3^2 + \dotsm + n^2 = \dfrac{n(2n + 1)(n + 1)}{6}.
+\]
+
+\end{exercise}
+
+\begin{exercise}
+Prove Theorem \ref{Induction}.
+\end{exercise}
+
+
+\subsection*{Sets}
+
+\begin{nondefinition}
+We do not define what a set is, but take it as our primary notion.  A set $A$ is composed of elements, which are determined by the statement ``$a$ is an element of $A$'' or ``$A$ contains $a$''.  We write this in symbols as: $a \in A$.  Sets are often written by listing their elements inside of curly-braces, such as:
+\[
+\{1, 2, 3, 4, 5\}, \; \{ 7\}, \; \{ 5, 3, B, \text{Jordan}\}, \; \text{and} \; \{ 0, \{1 \} \}.
+\]
+Two sets are equal when they contain exactly the same elements.
+\end{nondefinition}
+
+\begin{exercise}
+Is the set $\{ 0, 1 \}$ equivalent to the set $\{ 0, \{ 1 \} \}$?
+\end{exercise}
+
+\begin{definition}  The set that contains no elements is called the \emph{empty set}, and is denoted by $\varnothing$.
+\end{definition}
+
+\begin{exercise}
+Is it true that every element of the empty set is an integer divisible by 17?
+\end{exercise}
+
+A common way to denote the set of all things $x$ that have a property $P$ is the following:
+\[
+\{ x \mid \text{$x$ has property $P$} \}.
+\]
+When we only consider things $x$ that are elements of some fixed set $S$, one writes:
+\[
+\{ x \in S \mid \text{$x$ has property $P$} \}.
+\]
+For example, the set of all integers divisible by $3$ may be written as:
+\[
+\{ x \in \mathbb{Z} \mid \text{$x$ is divisible by $3$} \}.
+\]
+
+
+
+
+
+
+\begin{definition}  Let $A$ and $B$ be sets.  If each element of $A$ is an element of $B$, then we say that $A$ is a \emph{subset} of $B$ and write this in symbols as $A \subset B$.
+\end{definition}
+
+\begin{exercise}  How many subsets does the empty set have?
+\end{exercise}
+
+
+
+
+
+\begin{definition}  Let $A$ and $B$ be sets.  The \emph{union} of $A$ and $B$ is the set
+\[
+A \cup B = \{x \mid \text{$x \in A$ or $x \in B$ } \}.
+\]
+The \emph{intersection} of $A$ and $B$ is the set
+\[
+A \cap B = \{ x \mid \text{$x \in A$ and $x \in B$ } \}.
+\]
+The \emph{complement} or \emph{difference} of $B$ in $A$ is the set
+\[
+A \setminus B = \{ x \in A \mid x \notin B \}.
+\]
+When the set $A$ is clear from the context, $A \setminus B$ is often called the \emph{complement} of $B$, and is written $B^{c}$. \\
+
+\noindent The \emph{product} of $A$ and $B$ is the set of ordered pairs
+\[
+A \times B = \{ (a, b) \mid \text{$a \in A$ and $b \in B$} \}.
+\]
+\end{definition}
+
+
+\subsection*{Functions}
+
+\begin{definition} Let $A$ and $B$ be sets.  A \emph{function} $f$ from $A$ to $B$ is a subset $f \subset A \times B$ such that for all $a \in A$ there exists a unique $b \in B$ satisfying $(a, b) \in f$.  Instead of writing $(a, b) \in f$, we will write $f(a) = b$.  To express that $f$ is a function from $A$ to $B$ in symbols we write $f \colon A \rightarrow B$.  
+\end{definition}
+
+This definition may conflict with your idea of what a function is.  
+
+\begin{exercise}  Resolve this conflict by explaining what a function $f$ ``sends'' an element $a \in A$ ``to''.
+\end{exercise}
+
+\begin{exercise}  Consider the function $f \colon \mathbb{Z} \rightarrow \mathbb{Z}$ that sends an integer $n$ to the integer $n + n$.  Describe $f$ as a subset of $\mathbb{Z} \times \mathbb{Z}$.  A picture may be useful.
+\end{exercise}
+
+\begin{definition}  Let $f \colon A \rightarrow B$ be a function.  The \emph{domain} of $f$ is $A$.  If $X \subset A$ then the \emph{image of $X$ under $f$} is the set
+\[
+f(X) = \{ b \in B \mid \text{$f(x) = b$ for some $x \in X$} \}.
+\]
+If $Y \subset B$, then the \emph{preimage of $Y$ under $f$} is the set
+\[
+f^{-1}(Y) = \{ a \in A \mid f(a) \in Y \}.
+\]
+\end{definition}
+
+\begin{definition}  A function $f \colon A \rightarrow B$ is \emph{surjective} (also known as `onto') if $f(A) = B$.  $f$ is \emph{injective} (also known as `one-to-one') if for all $a, a' \in A$, if $f(a) = f(a')$, then $a = a'$.  $f$ is \emph{bijective}, (also known as a bijection or a `one-to-one' correspondence) if it is surjective and injective.
+\end{definition}
+
+
+
+\begin{lemma} Suppose that $f \colon A \rightarrow B$ is bijective.  Then there exists a bijection $g \colon B \rightarrow A$.
+\end{lemma}
+
+
+Because of this lemma we can make the following definition:
+
+\begin{definition}
+We say that two sets $A$ and $B$ are in \emph{bijective correspondence} when there exists a bijection from $A$ to $B$ or, equivalently, from $B$ to $A$.
+\end{definition}
+
+
+\begin{exercise}  Let $n \in \mathbb{N}$ be a natural number and let $[n]$ be the set $\{1, 2, \dotsc, n \}$.  What do we usually call the set $[0]$?  How many subsets does $[n]$ have?  
+\end{exercise}
+
+
+
+\begin{definition}  
+A set $A$ if \emph{finite} if there exists a natural number $n$ and a bijective correspondence between $A$ and the set $[n]$.  In this case, we say that the \emph{cardinality} of $A$ is $n$, or (slightly ambiguously) that $A$ has $n$ elements, and we write $\abs{A} = n$.  In general, if there exists a bijection between two sets $A$ and $B$, then we say that $A$ and $B$ have the same cardinality and write $\abs{A} = \abs{B}$.
+\end{definition}
+
+\begin{lemma}  Let $A$, $B$, and $C$ be sets and suppose that there is a bijective correspondence between $A$ and $B$ and a bijective correspondence between $B$ and $C$.  Then there is a bijective correspondence between $A$ and $C$.
+\end{lemma}
+
+The following result shows that the cardinality of a finite set is well-defined:
+
+\begin{exercise}  Let $A$ be a set and suppose that $\abs{A} = m$ and $\abs{A} = n$.  Then $m = n$.
+\end{exercise}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

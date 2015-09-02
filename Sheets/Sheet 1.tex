@@ -1,0 +1,330 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}   %% includes comment environment
+\usepackage{fullpage}   %% smaller margins
+\usepackage{relsize}    %% can make symbols larger
+%\usepackage{bm}
+
+\usepackage{color} %% theorem colors
+\definecolor{purple}{rgb}{0.5,0.20,0.7}
+\definecolor{navy}{rgb}{0,0.3,0.7}
+\definecolor{forrest}{rgb}{0,0.55,0.25}
+\definecolor{strawberry}{rgb}{0.9,0.17,0.3}
+\definecolor{orange}{rgb}{0.9,0.40,0.2}
+\definecolor{pink}{rgb}{0.85,0.50,0.75}
+
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\newcommand{\calC}{\mathcal{C}}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+\renewcommand{\_}[1]{\underline{ #1 }}
+
+
+\DeclareMathOperator{\ext}{ext}
+
+
+\newcommand{\mathhuge}[1]{\mathlarger{\mathlarger{\mathlarger{{#1}}}}}
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{\color{navy}Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{\color{purple}Lemma}
+\newtheorem{corollary}[theorem]{\color{pink}Corollary}
+
+
+\newtheorem{axiom}{Axiom}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{\color{forrest}Definition}
+\newtheorem{nondefinition}[theorem]{\color{forrest}Non-Definition}
+\newtheorem{exercise}[theorem]{\color{orange}Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{\color{strawberry}Warning}
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\title{Sheet 1: Introducing the Continuum}
+\author{Jordan Paschke}
+\date{}
+
+\begin{document}
+
+\begin{center}
+{\large  MATH 113 -- Honors Calculus\\
+$\bullet$ \quad \textbf{SHEET 1: INTRODUCING THE CONTINUUM \quad $\bullet$}}  \\ 
+\vspace{.2in}  
+Jordan Paschke\\September 2, 2015
+\end{center}
+
+\bigskip \bigskip
+
+%%-----sheet number for theorem counter-----
+\setcounter{section}{1}   
+
+\noindent This sheet introduces \textbf{the continuum} $\calC$ through a series of axioms.
+
+\vspace{0.2cm}
+
+%%%%%%%%%%%%%%%%%%
+%%---AXIOM 1----%%
+%%%%%%%%%%%%%%%%%%
+\fbox{\fbox{\parbox{3.4in}{
+\begin{axiom}  The continuum is a nonempty set $\calC$.  
+\end{axiom}}}}
+
+\vspace{0.2cm}
+
+\noindent We often refer to elements of $\calC$ as \emph{points}.
+
+
+\begin{definition}  Let $X$ be a set.  An \emph{ordering} on the set $X$ is a subset of $X \times X$, denoted by $<$, with elements $(x,y) \in <$ written as $x < y$, satisfying the following properties:
+
+\begin{itemize}
+\item[(a)] For all $x, y \in X$ such that $x \neq y$, either $x < y$ or $y < x$.
+\item[(b)] For all $x, y \in X$, if $x < y$ then $x \neq y$.
+\item[(c)] For all $x, y, z \in X$, if $x < y$ and $y < z$ then $x < z$.
+\end{itemize}
+\end{definition}
+
+%%%%%%%%%%%%%%%%%%
+%%---AXIOM 2----%%
+%%%%%%%%%%%%%%%%%%
+\fbox{\fbox{\parbox{3.2in}{
+\begin{axiom}  There exists an ordering $<$ on $\calC$.
+\end{axiom}}}}
+
+\begin{theorem}  If $x$ and $y$ are points of $\calC$, then $x < y$ and $y < x$ are not both true.
+\end{theorem}
+
+\begin{definition}  If $A \subset \calC$ is a subset of $\calC$, then a point $a \in A$ is a \emph{first} point of $A$ if, for every element $x \in A$, either $a < x$ or $a = x$.  Similarly, a point $b \in A$ is called a \emph{last} point of $A$ if, for every $x \in A$, either $x < b$ or $x = b$.
+\end{definition}
+
+\begin{lemma}  If $A$ is a nonempty, finite subset of $\calC$, then $A$ has a first and last point.
+\end{lemma}
+
+\begin{theorem}  Suppose that $A$ is a set of $n$ distinct points in $\calC$, or, in other words, $A \subset \calC$ has cardinality $n$.  Then symbols $a_1, \dotsc, a_n$ may be assigned to each point of $A$ so that $a_1 < a_2 < \dotsm < a_n$, i.e. $a_i < a_{i + 1}$ for $1 \leq i \leq n - 1$.
+\end{theorem}
+
+\begin{definition}  If $x, y, z \in \calC$ and both $x < y$ and $y < z$, then we say that $y$ is \emph{between} $x$ and $z$.
+\end{definition}
+
+\begin{corollary}  Of three distinct points, one must be between the other two.
+\end{corollary}
+
+%%%%%%%%%%%%%%%%%%
+%%---AXIOM 3----%%
+%%%%%%%%%%%%%%%%%%
+\fbox{\fbox{\parbox{2.8in}{
+\begin{axiom}  $\calC$ has no first or last point.
+\end{axiom}}}}
+
+\begin{definition} If $a < b$, then the set of all points between $a$ and $b$ is called a \emph{region}, denoted by $\_{ab}$.  
+\end{definition}
+
+\begin{warning}  One often sees the notation $(a, b)$ for regions.  We will reserve the notation $(a, b)$ for ordered pairs in a product $A \times B$.  These are very different things.  
+\end{warning}
+
+\begin{theorem} If $x$ is a point of $\calC$, then there exists a region $\_{ab}$ such that $x \in \_{ab}$.
+\end{theorem}
+
+We now come to one of the most important definitions of this course:
+
+\begin{definition}
+Let $A$ be a nonempty subset of $\calC$.  A point $p$ of $\calC$ is called a \emph{limit point} of $A$ if every region $R$ containing $p$ has nonempty intersection with $A \setminus \{p\}$.  Explicitly, this means:
+\[
+\text{for every region $R$ with $p \in R$, we have $R \cap (A \setminus \{p \}) \neq \varnothing$.}
+\]
+\end{definition}
+
+Notice that we do not require that a limit point $p$ of $A$ be an element of $A$.
+
+\begin{theorem} If $p$ is a limit point of $A$ and $A \subset B$, then $p$ is a limit point of $B$.
+\end{theorem}
+
+
+
+\begin{lemma} If $\_{ab}$ is a region in $\calC$, then:
+\[
+\calC = \{ x \mid x < a \} \cup \{a\} \cup \_{ab} \cup \{b \} \cup \{ x \mid b < x \}.
+\]
+\end{lemma}
+
+\begin{definition} If $\_{ab}$ is a region in $\calC$, then $\calC \setminus \left(\{a\} \cup \_{ab} \cup \{b\}\right)$ is called the \emph{exterior} of $\_{ab}$ and is denoted by $\ext{ab}$.
+\end{definition}
+
+\begin{lemma}  If $\_{ab}$ is a region in $\calC$, then:
+\[
+\calC = \ext{ab} \cup \{a\} \cup \{b\} \cup \_{ab}.
+\]
+\end{lemma}
+
+\begin{lemma}  No point in the exterior of a region is a limit point of that region.  No point of a region is a limit point of the exterior of that region.
+\end{lemma}
+
+
+\begin{theorem}  If two regions have a point $x$ in common, their intersection is a region containing $x$.
+\end{theorem}
+
+\begin{corollary}  If $n$ regions $R_1, \dotsc, R_n$ have a point $x$ in common, then their intersection $R_1 \cap \dotsm \cap R_n$ is a region containing $x$.
+\end{corollary}
+
+\begin{theorem}  Let $A, B \subset \calC$.  If $p$ is a limit point of $A \cup B$, then $p$ is a limit point of $A$ or $B$.
+\end{theorem}
+
+\begin{corollary}  Let $A_1, \dotsc, A_n$ be $n$ subsets of $\calC$.  If $p$ is a limit point of $A_1 \cup \dotsm \cup A_n$, then $p$ is a limit point of at least one of the sets $A_k$.
+\end{corollary}
+
+The converse is also true, so we have both directions:
+
+\begin{corollary}
+Let $A_1, \dotsc, A_n$ be $n$ subsets of $\calC$.  Then $p$ is a limit point of $A_1 \cup \dotsm \cup A_n$ if and only if $p$ is a limit point of at least one of the sets $A_k$.
+\end{corollary}
+
+\begin{definition}  Two sets $A$ and $B$ are \emph{disjoint} if $A \cap B = \varnothing$.  
+\end{definition}
+
+\begin{theorem}  If $p$ and $q$ are distinct points of $\calC$, then there exist disjoint regions $R$ and~$S$ containing $p$ and $q$, respectively.
+\end{theorem}
+
+\begin{corollary}  A subset of $\calC$ consisting of one point has no limit points.
+\end{corollary}
+
+\begin{theorem} A finite subset $A \subset \calC$ has no limit points.
+\end{theorem}
+
+\begin{corollary}  If $A \subset \calC$ is finite and $x \in A$, then there exists a region $R$ such that $A \cap R = \{ x \}$.
+\end{corollary}
+
+\begin{definition}  A set is \emph{infinite} if it is not finite.
+\end{definition}
+
+\begin{theorem}  If $p$ is a limit point of $A$ and $R$ is a region containing $p$, then the set $R \cap A$ is infinite.
+\end{theorem}
+
+\begin{exercise}  Find realizations of the continuum $\left(\calC, <\right)$.  That is, find examples of sets $\calC$ endowed with a relation $<$ satisfying all of the axioms (so far).  Are they the same?  What does ``the same'' mean here?
+\end{exercise}
+
+
+
+\end{document}
