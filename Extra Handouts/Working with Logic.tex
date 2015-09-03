@@ -1,0 +1,482 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}   %% includes comment environment
+\usepackage{fullpage}   %% smaller margins
+\usepackage{relsize}    %% can make symbols larger
+%\usepackage{bm}
+\usepackage{enumerate}
+
+\usepackage{color} %% theorem colors
+\definecolor{purple}{rgb}{0.5,0.20,0.7}
+\definecolor{navy}{rgb}{0,0.3,0.7}
+\definecolor{forrest}{rgb}{0,0.55,0.25}
+\definecolor{strawberry}{rgb}{0.9,0.17,0.3}
+\definecolor{orange}{rgb}{0.9,0.40,0.2}
+\definecolor{pink}{rgb}{0.85,0.50,0.75}
+
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\newcommand{\calC}{\mathcal{C}}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+\renewcommand{\_}[1]{\underline{ #1 }}
+
+
+\DeclareMathOperator{\ext}{ext}
+
+
+\newcommand{\mathhuge}[1]{\mathlarger{\mathlarger{\mathlarger{{#1}}}}}
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{\color{navy}Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{\color{purple}Lemma}
+\newtheorem{corollary}[theorem]{\color{pink}Corollary}
+
+
+\newtheorem{axiom}{Axiom}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{\color{forrest}Definition}
+\newtheorem{nondefinition}[theorem]{\color{forrest}Non-Definition}
+\newtheorem{exercise}[theorem]{\color{orange}Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{\color{strawberry}Warning}
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\title{Working with Logic}
+\author{Jordan Paschke}
+\date{September 2, 2015}
+
+\begin{document}
+
+\maketitle
+
+%% \setcounter{section}{1}
+
+One of the hardest things to learn when you begin to write proofs is how to keep track of everything that is going on in a theorem. Using a proof by contradiction, or proving the contrapositive of a proposition, is sometimes the easiest way to move forward. However negating many different hypotheses all at once can be tricky.
+
+\bigskip
+
+This worksheet is designed to help you adjust between thinking in ``English" and thinking in ``math." It should hopefully serve as a reference sheet where you can quickly look up how the various logical operators and symbols interact with each other.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Logical Connectives}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Let us consider the two propositions:
+\[
+P = \text{``It is raining."}
+\]
+\[
+Q = \text{``I am indoors."}
+\]
+The following are called \textbf{logical connectives}, and they are the most common ways of combining two or more propositions (or only one, in the case of negation) into a new one.
+
+\begin{itemize}
+
+	\item \textbf{Negation (NOT)}: The logical negation of $P$ would read as
+	\[
+	    (\neg P) = \text{``It is not raining."}
+	\]
+	
+	\item \textbf{Conjunction (AND)}: The logical conjunction of $P$ and $Q$ would be read as
+	\[
+	    (P \land Q) = \text{``It is raining and I am indoors."}
+	\]
+	
+	\item \textbf{Disjunction (OR)}: The logical disjunction of $P$ and $Q$ would be read as
+	\[
+	    (P \lor Q) = \text{``It is raining or I am indoors."}
+	\]
+	
+	\item \textbf{Implication (IF...THEN)}: The logical implication of $P$ and $Q$ would be read as
+	\[
+	  (P \Longrightarrow Q) = \text{``If it is raining, then I am indoors."}
+	\]
+	
+	\item \textbf{Biconditional (IF AND ONLY IF)}: The logical biconditional of $P$ and $Q$ would be read as
+	\[
+	    (P \Longleftrightarrow Q) = \text{``It is raining if and only if I am indoors."}
+	\]
+\end{itemize}
+
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hrule
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% inverse, converse, contrapositive %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Along with the implication $(P \Longrightarrow Q)$, there are three other related conditional statements worth mentioning:
+
+\begin{itemize}
+
+    \item \textbf{Converse}: The logical converse of $(P \Longrightarrow Q)$ would be read as
+    \[
+        (Q \Longrightarrow P) = \text{``If I am indoors, then it is raining."}
+    \]
+    
+    \item \textbf{Inverse}: The logical inverse of $(P \Longrightarrow Q)$ would be read as
+    \[
+        (\neg P \Longrightarrow \neg Q) = \text{``If it is not raining, then I am not indoors."}
+    \]
+    
+    \item \textbf{Contrapositive}: The logical contraposition of $(P \Longrightarrow Q)$ would be read as
+    \[
+        (\neg Q \Longrightarrow \neg P) = \text{``If I am not indoors, then I it is not raining."}
+    \]
+    
+\end{itemize}
+It is worth mentioning that the implication $(P \Longrightarrow Q)$ and the contrapositive $(\neg Q \Longrightarrow \neg P)$ are logically equivalent. That is, they are both simultaneously true or false. In symbols, we have
+\[
+    (P \Longrightarrow Q) \Longleftrightarrow (\neg Q \Longrightarrow \neg P)
+\]
+The inverse $(Q \Longrightarrow P)$ on the other hand is independent of the original implication. That is it may or may not be true, regardless of the validity of $(P \Longrightarrow Q)$. Note that if both propositions are true, then we would have a biconditional statement. Again, in symbols we would have
+\[
+    ((P \Longrightarrow Q) \land (Q \Longrightarrow P)) \Longleftrightarrow (P \Longleftrightarrow Q)
+\]
+Finally, notice that the inverse is simply the contraposition of the converse. This means that they are logically equivalent as well.\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hrule
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% negation of compound statements %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The previous section showed us that rather than trying to prove a statement directly, we may instead try to prove the contrapositive. This however involves the \textbf{negation} of propositions $P$ and $Q$, which may be difficult if they are \emph{compound} statements. Our next section will address how we should negate such statements and will allow us to form any proof by contradiction or contraposition with ease.
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%
+%%%% Theorem 1 %%%%
+%%%%%%%%%%%%%%%%%%%
+
+\begin{theorem}[DeMorgan's Laws]
+    The negation of ``AND" and ``OR" are logically equivalent to the following:
+    \begin{enumerate}[(a)]
+        \item $\neg (P \land Q) \Longleftrightarrow ((\neg P) \lor (\neg Q))$
+        \item $\neg (P \lor Q) \Longleftrightarrow ((\neg P) \land (\neg Q))$
+    \end{enumerate}
+\end{theorem}
+
+Consider the conjunction of our original propositions,
+	\[
+	    (P \land Q) = \text{``It is raining and I am indoors."}
+	\]
+
+The negation of this statement would be
+    \[
+	    \neg (P \land Q) = \text{`` `It is raining and I am indoors.' is false."}
+    \]
+    
+
+In order for the original statement to be false, then at least \emph{one} part of the original proposition must be false. In other words, it either \emph{isn't raining}, or \emph{I am not indoors}. It is possible that both might be the case, but if even one of $P$ or $Q$ is false, then their conjunction will be as well. In words, we have
+    \[
+	    \neg (P \land Q) = \text{``It is not raining, or I am not indoors."}
+    \]
+
+In symbols, this is exactly what part (a) of DeMorgan's laws says.
+
+%%%%%%%%%%%%%%%%%%%%
+%%%% Exercise 2 %%%%
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercise}
+    Use DeMorgan's laws to write out $\neg (P \lor Q)$ in words.
+\end{exercise}
+
+%%%%%%%%%%%%%%%%%%%%
+%%%% Exercise 3 %%%%
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercise}[XOR]
+    \textbf{Remark}: note that ``OR" includes the possibly of both propositions being true at the same time. In other words, if $(P\lor Q)$ is true, then either $P$ is true, $Q$ is true, or both are true. Therefore, if we wish to exclude the case when \emph{both} are true, we are then dealing with the situation
+    $$
+        ((P\lor Q) \land \neg(P\land Q))
+    $$
+    
+    We call this new logical operation \textbf{exclusive disjunction (XOR)} and denote it by
+    $$
+        (P\oplus Q) = \text{``It is raining, or I am indoors, but not both."}
+    $$
+    Use DeMorgan's laws to find an equivalent form of $(P\oplus Q)$.
+    
+\end{exercise}
+
+%%%%%%%%%%%%%%%%%%%
+%%%% Theorem 4 %%%%
+%%%%%%%%%%%%%%%%%%%
+
+\begin{theorem}
+    The negation of ``IF...THEN" is logically equivalent to the following:
+    $$\neg(P \Longrightarrow Q) \Longleftrightarrow (P \land (\neg Q))$$
+\end{theorem}
+
+Considering the implication \[
+	  (P \Longrightarrow Q) = \text{``If it is raining, then I am indoors."}
+	\]
+then the negation would be
+    \[
+	  \neg(P \Longrightarrow Q) = \text{`` `If it is raining, then I am indoors.' is false."}
+	\]
+
+The only way for this implication to be false would be if there was a situation in which it is raining, \emph{but} I am outdoors. In words, this means
+    \[
+	  \neg(P \Longrightarrow Q) = \text{``It is raining and I am not indoors."}
+	\]
+In symbols, this is exactly what the theorem tells us.
+
+%%%%%%%%%%%%%%%%%%%%
+%%%% Exercise 5 %%%%
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercise}
+    Use Theorem 1 and Theorem 4, along with that fact that
+    \[
+    ((P \Longrightarrow Q) \land (Q \Longrightarrow P)) \Longleftrightarrow (P \Longleftrightarrow Q)
+    \]
+    to find an equvalent form of $\neg(P \Longleftrightarrow Q)$.
+\end{exercise}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hrule
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bigskip
+
+We end our discussion of logical connectives with one more concrete example to help illuminate these ideas a little further. Consider the new proposition
+$$ R = \text{``I do not own an umbrella."} $$
+
+We will now examine the compound statement
+$$
+    ((P \land R) \Longrightarrow Q) = \text{``If it is raining, and I do not own an umbrella, then I am indoors."}
+$$
+
+We are able to find the negation of this statment by using Theorem 4:
+$$
+    \neg ((P \land R) \Longrightarrow Q) \Longleftrightarrow (P \land R) \land (\neg Q)
+$$
+ In other words, ``It is raining, I do not own an umbrella, and I am outdoors." So while the first statement implied that I do not going out without an umbrella when it's raining, the negation says that I occasionally go out into the rain without an umbrella.\\
+ 
+We now also consider the contrapositive of the original statement:
+\begin{align*}
+    ((P \land R) \Longrightarrow Q) &\Longleftrightarrow ((\neg Q) \Longrightarrow \neg(P \land R))\\
+    &\Longleftrightarrow ((\neg Q) \Longrightarrow ((\neg P) \lor (\neg R)))
+\end{align*}
+
+where the last equivalence came from DeMorgan's law (a). This looks considerably more complicated in terms of the symbols used, but it is in fact logically equivalent to our original sentence. In words, the contrapositive says,
+\begin{center}
+    ``If I am outdoors, then either it is not raining, or I own an umbrella."
+\end{center}
+which is clearly the same as the first sentence.
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hrule
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Logical Quantifiers}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The final topic we will discuss is the concept of \textbf{logical quantifiers}: 
+\begin{itemize}
+    \item \textbf{Universal Quantifier (FOR ALL)}, denoted by $\forall$
+    \item \textbf{Existential Quantifier (THERE EXISTS)}, denoted $\exists$
+\end{itemize}
+These symbols always quantify some variable $x$ and are immediately followed by some proposition $P(x)$, which depends on the variable. To better understand what all of this means, we shall consider a couple examples:\\
+
+Let $W=\{\text{Sunday}, \text{Monday}, \ldots, \text{Saturday}\}$ denote the set of days of the week and let $T=\{\text{Tuesday},\text{Thursday}\}\subset W$ be the days which start with the letter ``T".\\
+
+Let $R(x)$ be the proposition (which depends on $x$)
+\begin{align*}
+    R(x) &= ((x\in T) \Longrightarrow P)\\
+    &= \text{``If $x$ is an element of $T$, then it is raining."}
+\end{align*}
+
+Then we can use the \emph{universal} quantifier $\forall$ to construct the statement
+$$
+    (\forall x\in W, R(x))
+$$
+In words, we interpret this as ``For all days of the week, if the day begins with `T', then it is raining." (i.e. ``It rains on Tuesdays and Thursdays.") Here, the variable $x$ is in the set $W$ (so $x$ is a day of the week), and the proposition $R(x)$ is then true for all instances of $x$.\\
+
+Similarly, if $S(x)$ is the proposition
+\begin{align*}
+    S(x) &= ((x\in T) \land Q)\\
+    &= \text{``$x$ is an element of $T$ and I am indoors."}
+\end{align*}
+
+then we can use the \emph{existential} quantifier $\exists$ to construct the statement
+$$
+    (\exists x\in W, S(x))
+$$
+In words, this means ``There exists a day of the week that begins with `T' in which I am indoors." (i.e. ``I am indoors on Tuesday or Thursday.") Unlike the universal quantifier, the existential quantifier only requires that $S(x)$ be true for \emph{at least one} instance of $x$.
+
+\newpage
+
+\begin{exercise}[$\forall x \exists y \neq \exists y \forall x$]
+    In general, universal quantifiers and existential quantifiers \textbf{do not commute} with each other. That is, if you swap the order in which you write $\forall$ and $\exists$, you will have a different logical statement.\\
+
+Create an explicit example to show that \[\text{``For all..., there exists... such that ..."}\] and \[\text{``There exists..., for all... such that ..."}\] are not necessarily equivalent.
+\end{exercise}
+
+\bigskip
+
+Naturally, we may wish to negate propositions that include these quantifiers. The following theorem tells us how to do that.
+
+%%%%%%%%%%%%%%%%%%%
+%%%% Theorem 7 %%%%
+%%%%%%%%%%%%%%%%%%%
+
+\begin{theorem}
+    The negation of ``FOR ALL" and ``THERE EXISTS" are logically equivalent to the following:
+    \begin{enumerate}[(a)]
+    \item $\neg(\forall x\in A, P(x)) \Longleftrightarrow \exists x\in A, \neg P(x)$
+    \item $\neg(\exists x\in A, P(x)) \Longleftrightarrow \forall x\in A, \neg P(x)$
+    \end{enumerate}
+\end{theorem}
+
+As an example, let $E$ be the set of all people on Earth, let $M$ be the set of all aliens on Mars, and let $F(x,y)$ be the proposition ``$x$ and $y$ are friends." We can then construct the statement
+$$
+    (\forall x\in E, \exists y\in M, F(x,y))
+$$
+In words, this reads, ``For every person on Earth, there is an alien on Mars with whom they are friends."\\
+
+Taking the negation of this statement gives us
+$$
+    \neg(\forall x\in E, \exists y\in M, F(x,y)) \Longleftrightarrow (\exists x\in E, \forall y\in M, \neg F(x,y))
+$$
+In words, this negation then says, ``There is a person on Earth which is enemies with every alien on Mars." (if we take ``enemy" as the negation of ``friend")
+
+\end{document}
