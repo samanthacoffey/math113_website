@@ -1,6 +1,7 @@
 body {
 	background: #fffdfc;
 	color: #5e5c5b;
+	font-family: 'Lato', sans-serif;;
 }
 
 a {
@@ -8,6 +9,6 @@ a {
 }
 
 hr {
-	border-color: #5e5c5b;
+	border-color: #40919c;
 }
 
